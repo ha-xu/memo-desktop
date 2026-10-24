@@ -7,6 +7,8 @@
 
 [简体中文](../../README.md) · [繁體中文](README.zh-TW.md) · **English** · [日本語](README.ja.md) · [한국어](README.ko.md) · [Deutsch](README.de.md) · [Français](README.fr.md) · [Español](README.es.md) · [Português](README.pt-BR.md) · [Русский](README.ru.md) · [العربية](README.ar.md)
 
+![Memo Desktop — Screenshots](../media/screenshots/01-workspace-en.png)
+
 ## Features
 
 - **Desktop notes**: independent windows, dragging, resizing, always-on-top, locking, stars, and soft shadows.
@@ -18,6 +20,26 @@
 - **Local storage**: notes stay in the current Windows user’s data directory. No app account or cloud synchronization is required.
 
 Officially supported: **Windows 10/11 x64**. Other platforms and Windows ARM64 are not included in packaging or validation.
+
+## Screenshots
+
+### Desktop notes
+
+Drag, pin, lock, and star independent desktop notes.
+
+![Desktop notes](../media/screenshots/03-desktop-notes.png)
+
+### Edge docking and hover preview
+
+Manually fold notes into edge tabs. Hover to preview while leaving room for other tabs.
+
+![Edge docking and hover preview](../media/screenshots/08-edge-dock.png)
+
+### Markdown editing and preview
+
+Capture ideas in Markdown and switch to a clean reading preview.
+
+![Markdown editing and preview](../media/screenshots/04-markdown.png)
 
 ## Install and update
 

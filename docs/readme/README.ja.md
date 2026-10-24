@@ -7,6 +7,8 @@
 
 [简体中文](../../README.md) · [繁體中文](README.zh-TW.md) · [English](README.en.md) · **日本語** · [한국어](README.ko.md) · [Deutsch](README.de.md) · [Français](README.fr.md) · [Español](README.es.md) · [Português](README.pt-BR.md) · [Русский](README.ru.md) · [العربية](README.ar.md)
 
+![Memo Desktop — スクリーンショット](../media/screenshots/01-workspace-en.png)
+
 ## 機能
 
 - **デスクトップメモ**：独立したウィンドウ、移動、サイズ変更、最前面表示、ロック、スター、柔らかな影。
@@ -18,6 +20,26 @@
 - **ローカル保存**：現在の Windows ユーザーのデータフォルダーに保存します。アプリのアカウントやクラウド同期は不要です。
 
 正式対応は **Windows 10/11 x64** です。その他の OS と Windows ARM64 はパッケージ作成・検証の対象外です。
+
+## スクリーンショット
+
+### デスクトップの付箋
+
+付箋のドラッグ、最前面表示、ロック、スターに対応。
+
+![デスクトップの付箋](../media/screenshots/03-desktop-notes.png)
+
+### サイド収納とホバープレビュー
+
+付箋を画面端のタブに手動で収納。ホバーすると、ほかのタブを隠さずにプレビューできます。
+
+![サイド収納とホバープレビュー](../media/screenshots/08-edge-dock.png)
+
+### Markdown の編集とプレビュー
+
+Markdown でアイデアを記録し、プレビューに切り替えられます。
+
+![Markdown の編集とプレビュー](../media/screenshots/04-markdown.png)
 
 ## インストールと更新
 

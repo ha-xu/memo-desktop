@@ -7,6 +7,8 @@
 
 [简体中文](README.md) · [繁體中文](docs/readme/README.zh-TW.md) · [English](docs/readme/README.en.md) · [日本語](docs/readme/README.ja.md) · [한국어](docs/readme/README.ko.md) · [Deutsch](docs/readme/README.de.md) · [Français](docs/readme/README.fr.md) · [Español](docs/readme/README.es.md) · [Português](docs/readme/README.pt-BR.md) · [Русский](docs/readme/README.ru.md) · [العربية](docs/readme/README.ar.md)
 
+![Memo Desktop — 界面预览](docs/media/screenshots/02-workspace-zh-CN.png)
+
 ## 功能
 
 - **桌面便签**：独立窗口、拖动与缩放、置顶、锁定、标星和柔和阴影。
@@ -18,6 +20,26 @@
 - **本地存储**：便签保存在当前 Windows 用户的本机目录，不依赖应用账号或云端同步。
 
 当前正式支持 **Windows 10/11 x64**。其他平台和 Windows ARM64 尚未纳入打包与验证。
+
+## 界面预览
+
+### 桌面便签
+
+独立便签支持拖动、置顶、锁定与标星。
+
+![桌面便签](docs/media/screenshots/03-desktop-notes.png)
+
+### 侧边收纳与悬停预览
+
+手动收起为贴边标题标签，悬停展开便签，同时为其他标签保留空间。
+
+![侧边收纳与悬停预览](docs/media/screenshots/08-edge-dock.png)
+
+### Markdown 编辑与预览
+
+用简单的 Markdown 记录想法，一键切换阅读预览。
+
+![Markdown 编辑与预览](docs/media/screenshots/04-markdown.png)
 
 ## 安装与更新
 

@@ -7,6 +7,8 @@
 
 [简体中文](../../README.md) · **繁體中文** · [English](README.en.md) · [日本語](README.ja.md) · [한국어](README.ko.md) · [Deutsch](README.de.md) · [Français](README.fr.md) · [Español](README.es.md) · [Português](README.pt-BR.md) · [Русский](README.ru.md) · [العربية](README.ar.md)
 
+![Memo Desktop — 介面預覽](../media/screenshots/01-workspace-en.png)
+
 ## 功能
 
 - **桌面便箋**：獨立視窗、拖曳與縮放、置頂、鎖定、標星和柔和陰影。
@@ -18,6 +20,26 @@
 - **本機儲存**：資料位於目前 Windows 使用者的本機目錄，不需要應用程式帳號或雲端同步。
 
 正式支援 **Windows 10/11 x64**；其他平台及 Windows ARM64 尚未納入打包與驗證。
+
+## 介面預覽
+
+### 桌面便箋
+
+獨立便箋支援拖曳、置頂、鎖定與標星。
+
+![桌面便箋](../media/screenshots/03-desktop-notes.png)
+
+### 側邊收納與懸停預覽
+
+手動收起為貼邊標題標籤，懸停展開便箋，同時為其他標籤保留空間。
+
+![側邊收納與懸停預覽](../media/screenshots/08-edge-dock.png)
+
+### Markdown 編輯與預覽
+
+使用簡單的 Markdown 記錄想法，一鍵切換閱讀預覽。
+
+![Markdown 編輯與預覽](../media/screenshots/04-markdown.png)
 
 ## 安裝與更新
 
