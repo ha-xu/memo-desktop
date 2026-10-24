@@ -1,0 +1,136 @@
+name: Release
+
+on:
+  push:
+    tags: ['v*']
+
+permissions:
+  contents: read
+
+concurrency:
+  group: release-${{ github.ref }}
+  cancel-in-progress: false
+
+jobs:
+  build:
+    name: Verify and package
+    runs-on: windows-latest
+    timeout-minutes: 30
+    outputs:
+      version: ${{ steps.metadata.outputs.version }}
+      prerelease: ${{ steps.metadata.outputs.prerelease }}
+    env:
+      CI: true
+      ELECTRON_SKIP_BINARY_DOWNLOAD: '1'
+      CSC_IDENTITY_AUTO_DISCOVERY: 'false'
+    steps:
+      - name: Checkout tagged source
+        uses: actions/checkout@d23441a48e516b6c34aea4fa41551a30e30af803 # v6
+        with:
+          persist-credentials: false
+
+      - name: Setup Node.js
+        uses: actions/setup-node@249970729cb0ef3589644e2896645e5dc5ba9c38 # v6
+        with:
+          node-version: '22'
+          cache: npm
+
+      - name: Validate tag, package versions and changelog
+        id: metadata
+        run: npm run release:check
+        env:
+          RELEASE_TAG: ${{ github.ref_name }}
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Unit and release tests
+        run: npm test
+
+      - name: Typecheck and build
+        run: npm run build
+
+      - name: Prepare verified Electron runtime
+        run: npm run runtime
+
+      - name: Language and RTL window checks
+        run: npm run check:i18n
+
+      - name: Display and docking window checks
+        run: npm run check:dpi
+
+      - name: Build Windows x64 installer without publishing
+        run: npm run package:win
+
+      - name: Stage installer, blockmap, checksums and release notes
+        run: npm run release:prepare
+        env:
+          RELEASE_TAG: ${{ github.ref_name }}
+
+      - name: Upload release payload
+        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02 # v4
+        with:
+          name: memo-desktop-release
+          path: work/release-assets/*
+          if-no-files-found: error
+          compression-level: 0
+          retention-days: 14
+
+      - name: Upload isolated UI test screenshots
+        if: always()
+        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02 # v4
+        with:
+          name: release-ui-checks
+          path: work/i18n-qa/*.png
+          if-no-files-found: ignore
+          retention-days: 7
+
+  publish:
+    name: Publish GitHub Release
+    needs: build
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    permissions:
+      contents: write
+    steps:
+      # No checkout, npm install or application code execution in the write job.
+      - name: Download verified release payload
+        uses: actions/download-artifact@d3f86a106a0bac45b974a628896c90dbdf5c8093 # v4
+        with:
+          name: memo-desktop-release
+          path: release-assets
+
+      - name: Verify artifact checksums
+        working-directory: release-assets
+        run: sha256sum --check SHA256SUMS.txt
+
+      - name: Publish complete release
+        shell: bash
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          RELEASE_TAG: ${{ github.ref_name }}
+          RELEASE_VERSION: ${{ needs.build.outputs.version }}
+          PRERELEASE: ${{ needs.build.outputs.prerelease }}
+        run: |
+          set -euo pipefail
+          assets=(
+            "release-assets/Memo Desktop Setup ${RELEASE_VERSION}.exe"
+            "release-assets/Memo Desktop Setup ${RELEASE_VERSION}.exe.blockmap"
+            "release-assets/SHA256SUMS.txt"
+          )
+          if is_draft=$(gh release view "$RELEASE_TAG" --repo "$GITHUB_REPOSITORY" --json isDraft --jq '.isDraft' 2>/dev/null); then
+            if [[ "$is_draft" != 'true' ]]; then
+              echo 'This release is already published. Published releases are not overwritten.' >&2
+              exit 1
+            fi
+            gh release upload "$RELEASE_TAG" "${assets[@]}" --repo "$GITHUB_REPOSITORY" --clobber
+          else
+            gh release create "$RELEASE_TAG" "${assets[@]}" \
+              --repo "$GITHUB_REPOSITORY" --verify-tag --draft \
+              --title "Memo Desktop $RELEASE_VERSION" \
+              --notes-file release-assets/release-notes.md
+          fi
+          gh release edit "$RELEASE_TAG" --repo "$GITHUB_REPOSITORY" \
+            --title "Memo Desktop $RELEASE_VERSION" \
+            --notes-file release-assets/release-notes.md \
+            --prerelease="$PRERELEASE" --draft=false

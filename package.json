@@ -1,0 +1,84 @@
+{
+  "name": "memo-desktop",
+  "version": "1.2.4",
+  "private": true,
+  "description": "Memo Desktop 桌面便签与 AI 工作台",
+  "author": "Memo Desktop",
+  "main": "electron/main.cjs",
+  "scripts": {
+    "dev": "vite --host 127.0.0.1",
+    "build": "tsc --noEmit && vite build",
+    "runtime": "node scripts/ensure-electron.cjs",
+    "start": "npm run runtime && npm run build && electron . --local",
+    "test": "node --test tests/*.test.cjs",
+    "pack": "npm run runtime && npm run build && electron-builder --win dir --x64 --publish never",
+    "dist": "npm run runtime && npm run build && npm run package:win",
+    "mcp": "node electron/mcp.cjs",
+    "check:dpi": "npm run runtime && node scripts/run-dpi-check.cjs",
+    "check:i18n": "node scripts/run-i18n-check.cjs",
+    "package:win": "electron-builder --win nsis --x64 --publish never",
+    "release:check": "node scripts/release.cjs check",
+    "release:prepare": "node scripts/release.cjs prepare"
+  },
+  "dependencies": {
+    "@base-ui/react": "^1.0.0",
+    "@modelcontextprotocol/sdk": "^1.27.1",
+    "class-variance-authority": "^0.7.1",
+    "clsx": "^2.1.1",
+    "i18next": "^26.5.7",
+    "lucide-react": "^0.468.0",
+    "react": "^19.2.0",
+    "react-dom": "^19.2.0",
+    "react-i18next": "^17.1.5",
+    "react-markdown": "^10.1.0",
+    "remark-gfm": "^4.0.1",
+    "tailwind-merge": "^3.3.1",
+    "zod": "^3.25.76"
+  },
+  "devDependencies": {
+    "@tailwindcss/vite": "^4.1.17",
+    "@types/node": "^22.19.0",
+    "@types/react": "^19.2.0",
+    "@types/react-dom": "^19.2.0",
+    "@vitejs/plugin-react": "^5.1.0",
+    "electron": "45.0.0",
+    "electron-builder": "^26.0.12",
+    "tailwindcss": "^4.1.17",
+    "typescript": "^5.9.3",
+    "vite": "^7.2.2"
+  },
+  "build": {
+    "appId": "local.memo.desktop",
+    "productName": "Memo Desktop",
+    "electronDist": "node_modules/electron/dist",
+    "directories": {
+      "output": "release"
+    },
+    "files": [
+      "dist/**/*",
+      "electron/**/*",
+      "package.json",
+      "public/**/*",
+      "locales/**/*",
+      "LICENSE",
+      "THIRD_PARTY_NOTICES.md"
+    ],
+    "win": {
+      "target": "nsis",
+      "signExecutable": false,
+      "icon": "public/memo-icon.ico"
+    },
+    "nsis": {
+      "oneClick": false,
+      "allowToChangeInstallationDirectory": true,
+      "createDesktopShortcut": true,
+      "installerIcon": "public/memo-icon.ico",
+      "uninstallerIcon": "public/memo-icon.ico"
+    },
+    "artifactName": "${productName} Setup ${version}.${ext}"
+  },
+  "license": "MIT",
+  "engines": {
+    "node": ">=22.12.0"
+  }
+}

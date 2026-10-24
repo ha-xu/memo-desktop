@@ -1,0 +1,80 @@
+name: Bug report / 问题反馈
+description: 报告可复现的功能、窗口或安装问题
+title: "[Bug] "
+body:
+  - type: markdown
+    attributes:
+      value: |
+        请先搜索已有 Issue，并使用虚构便签内容复现。
+        安全漏洞请按仓库 SECURITY.md 私密报告，不要在此公开细节。
+  - type: input
+    id: version
+    attributes:
+      label: 应用版本 / App version
+      description: 可在管理窗口侧栏底部查看。
+      placeholder: "1.2.0"
+    validations:
+      required: true
+  - type: dropdown
+    id: source
+    attributes:
+      label: 运行方式 / Installation
+      options:
+        - Release 安装包
+        - start.cmd / npm start
+        - 免安装目录
+        - 浏览器预览
+    validations:
+      required: true
+  - type: input
+    id: windows
+    attributes:
+      label: Windows 版本和系统架构
+      placeholder: Windows 11 24H2 x64
+    validations:
+      required: true
+  - type: input
+    id: displays
+    attributes:
+      label: 显示器与缩放比例
+      description: 涉及便签位置、收纳或尺寸时填写，包括副屏及负坐标排列。
+      placeholder: 主屏 3840×2160 / 250%，副屏 2560×1440 / 150%
+  - type: input
+    id: language
+    attributes:
+      label: 界面语言与主题
+      placeholder: 简体中文，浅色
+  - type: textarea
+    id: steps
+    attributes:
+      label: 复现步骤 / Steps to reproduce
+      placeholder: |
+        1. 新建便签
+        2. 点击收纳按钮
+        3. 将鼠标移到侧边标签
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: 预期行为 / Expected behavior
+    validations:
+      required: true
+  - type: textarea
+    id: actual
+    attributes:
+      label: 实际行为 / Actual behavior
+    validations:
+      required: true
+  - type: textarea
+    id: evidence
+    attributes:
+      label: 截图、录屏或错误信息
+      description: 请移除个人便签、账号、路径和凭据信息；不要上传真实 memo.json。
+  - type: checkboxes
+    id: checks
+    attributes:
+      label: 提交前确认
+      options:
+        - label: 已搜索现有 Issue，且此报告不包含敏感数据或未公开漏洞细节。
+          required: true

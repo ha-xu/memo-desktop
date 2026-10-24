@@ -1,0 +1,12 @@
+node_modules/
+dist/
+release/
+*.log
+work/
+.env
+.env.*
+!.env.example
+*.pem
+*.pfx
+*.p12
+coverage/

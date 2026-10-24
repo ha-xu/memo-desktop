@@ -1,0 +1,1 @@
+const {contextBridge,ipcRenderer}=require('electron');contextBridge.exposeInMainWorld('memo',{call:(action,args)=>ipcRenderer.invoke('i18n-qa:call',action,args),subscribe:callback=>{const listener=(_,state)=>callback(state);ipcRenderer.on('i18n-qa:state',listener);return()=>ipcRenderer.removeListener('i18n-qa:state',listener)},onDock:()=>()=>{}});
