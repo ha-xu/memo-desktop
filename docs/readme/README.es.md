@@ -7,6 +7,8 @@
 
 [简体中文](../../README.md) · [繁體中文](README.zh-TW.md) · [English](README.en.md) · [日本語](README.ja.md) · [한국어](README.ko.md) · [Deutsch](README.de.md) · [Français](README.fr.md) · **Español** · [Português](README.pt-BR.md) · [Русский](README.ru.md) · [العربية](README.ar.md)
 
+![Memo Desktop — Capturas de pantalla](../media/screenshots/01-workspace-en.png)
+
 ## Funciones
 
 - **Notas de escritorio**: ventanas independientes, movimiento, cambio de tamaño, siempre encima, bloqueo, estrellas y sombras suaves.
@@ -18,6 +20,26 @@
 - **Almacenamiento local**: los datos permanecen en la carpeta del usuario actual de Windows. No requiere cuenta de la aplicación ni sincronización en la nube.
 
 Compatibilidad oficial: **Windows 10/11 x64**. Otras plataformas y Windows ARM64 aún no forman parte del empaquetado y las pruebas.
+
+## Capturas de pantalla
+
+### Notas de escritorio
+
+Arrastra, fija, bloquea y marca tus notas favoritas.
+
+![Notas de escritorio](../media/screenshots/03-desktop-notes.png)
+
+### Plegado lateral y vista previa
+
+Pliega las notas en pestañas laterales y pasa el cursor para verlas sin tapar las demás.
+
+![Plegado lateral y vista previa](../media/screenshots/08-edge-dock.png)
+
+### Edición y vista previa de Markdown
+
+Escribe tus ideas en Markdown y cambia a una vista previa de lectura.
+
+![Edición y vista previa de Markdown](../media/screenshots/04-markdown.png)
 
 ## Instalación y actualizaciones
 

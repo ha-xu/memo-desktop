@@ -7,6 +7,8 @@
 
 [简体中文](../../README.md) · [繁體中文](README.zh-TW.md) · [English](README.en.md) · [日本語](README.ja.md) · [한국어](README.ko.md) · [Deutsch](README.de.md) · [Français](README.fr.md) · [Español](README.es.md) · **Português** · [Русский](README.ru.md) · [العربية](README.ar.md)
 
+![Memo Desktop — Capturas de tela](../media/screenshots/01-workspace-en.png)
+
 ## Recursos
 
 - **Notas na área de trabalho**: janelas independentes, movimento, redimensionamento, sempre no topo, bloqueio, favoritas e sombras suaves.
@@ -18,6 +20,26 @@
 - **Armazenamento local**: os dados ficam na pasta do usuário atual do Windows. Não exige conta no aplicativo nem sincronização em nuvem.
 
 Suporte oficial: **Windows 10/11 x64**. Outras plataformas e Windows ARM64 ainda não estão incluídos no empacotamento e na validação.
+
+## Capturas de tela
+
+### Notas na área de trabalho
+
+Arraste, fixe, bloqueie e marque suas notas favoritas.
+
+![Notas na área de trabalho](../media/screenshots/03-desktop-notes.png)
+
+### Recolhimento lateral e prévia ao passar o mouse
+
+Recolha notas em abas na borda e passe o mouse para visualizá-las sem cobrir as outras abas.
+
+![Recolhimento lateral e prévia ao passar o mouse](../media/screenshots/08-edge-dock.png)
+
+### Edição e prévia de Markdown
+
+Registre ideias em Markdown e alterne para uma prévia de leitura.
+
+![Edição e prévia de Markdown](../media/screenshots/04-markdown.png)
 
 ## Instalação e atualizações
 

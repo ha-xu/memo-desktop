@@ -7,6 +7,8 @@
 
 [简体中文](../../README.md) · [繁體中文](README.zh-TW.md) · [English](README.en.md) · [日本語](README.ja.md) · **한국어** · [Deutsch](README.de.md) · [Français](README.fr.md) · [Español](README.es.md) · [Português](README.pt-BR.md) · [Русский](README.ru.md) · [العربية](README.ar.md)
 
+![Memo Desktop — 스크린샷](../media/screenshots/01-workspace-en.png)
+
 ## 기능
 
 - **바탕 화면 메모**: 독립 창, 이동, 크기 조절, 항상 위, 잠금, 별표와 부드러운 그림자.
@@ -18,6 +20,26 @@
 - **로컬 저장**: 현재 Windows 사용자 폴더에 저장합니다. 앱 계정이나 클라우드 동기화가 필요하지 않습니다.
 
 공식 지원 환경은 **Windows 10/11 x64**입니다. 다른 플랫폼과 Windows ARM64는 패키징 및 검증 대상이 아닙니다.
+
+## 스크린샷
+
+### 데스크톱 메모
+
+독립 메모를 드래그하고 고정, 잠금, 별표 표시할 수 있습니다.
+
+![데스크톱 메모](../media/screenshots/03-desktop-notes.png)
+
+### 측면 접기 및 호버 미리보기
+
+메모를 화면 가장자리 탭으로 접고, 다른 탭을 가리지 않으면서 마우스를 올려 미리 보세요.
+
+![측면 접기 및 호버 미리보기](../media/screenshots/08-edge-dock.png)
+
+### Markdown 편집 및 미리보기
+
+Markdown으로 생각을 기록하고 읽기 편한 미리보기로 전환하세요.
+
+![Markdown 편집 및 미리보기](../media/screenshots/04-markdown.png)
 
 ## 설치 및 업데이트
 

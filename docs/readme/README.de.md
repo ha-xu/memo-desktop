@@ -7,6 +7,8 @@
 
 [简体中文](../../README.md) · [繁體中文](README.zh-TW.md) · [English](README.en.md) · [日本語](README.ja.md) · [한국어](README.ko.md) · **Deutsch** · [Français](README.fr.md) · [Español](README.es.md) · [Português](README.pt-BR.md) · [Русский](README.ru.md) · [العربية](README.ar.md)
 
+![Memo Desktop — Screenshots](../media/screenshots/01-workspace-en.png)
+
 ## Funktionen
 
 - **Desktopnotizen**: eigene Fenster, Verschieben, Größenänderung, Anheften, Sperren, Sterne und weiche Schatten.
@@ -18,6 +20,26 @@
 - **Lokale Speicherung**: Daten bleiben im Ordner des aktuellen Windows-Benutzers. Kein App-Konto und keine Cloud-Synchronisierung erforderlich.
 
 Offiziell unterstützt: **Windows 10/11 x64**. Andere Plattformen und Windows ARM64 werden bisher nicht paketiert oder geprüft.
+
+## Screenshots
+
+### Desktop-Notizen
+
+Unabhängige Notizen verschieben, im Vordergrund halten, sperren und markieren.
+
+![Desktop-Notizen](../media/screenshots/03-desktop-notes.png)
+
+### Am Bildschirmrand einklappen und Vorschau
+
+Notizen manuell als Rand-Tabs einklappen. Beim Darüberfahren bleibt Platz für andere Tabs.
+
+![Am Bildschirmrand einklappen und Vorschau](../media/screenshots/08-edge-dock.png)
+
+### Markdown bearbeiten und anzeigen
+
+Ideen in Markdown festhalten und zur Lesevorschau wechseln.
+
+![Markdown bearbeiten und anzeigen](../media/screenshots/04-markdown.png)
 
 ## Installation und Updates
 

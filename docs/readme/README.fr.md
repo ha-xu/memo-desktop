@@ -7,6 +7,8 @@
 
 [简体中文](../../README.md) · [繁體中文](README.zh-TW.md) · [English](README.en.md) · [日本語](README.ja.md) · [한국어](README.ko.md) · [Deutsch](README.de.md) · **Français** · [Español](README.es.md) · [Português](README.pt-BR.md) · [Русский](README.ru.md) · [العربية](README.ar.md)
 
+![Memo Desktop — Captures d’écran](../media/screenshots/01-workspace-en.png)
+
 ## Fonctionnalités
 
 - **Notes de bureau** : fenêtres indépendantes, déplacement, redimensionnement, épinglage, verrouillage, favoris et ombres douces.
@@ -18,6 +20,26 @@
 - **Stockage local** : les données restent dans le dossier de l’utilisateur Windows actuel. Aucun compte applicatif ni synchronisation cloud requis.
 
 Prise en charge officielle : **Windows 10/11 x64**. Les autres plateformes et Windows ARM64 ne sont pas encore inclus dans les paquets et validations.
+
+## Captures d’écran
+
+### Notes de bureau
+
+Déplacez, épinglez, verrouillez et marquez vos notes favorites.
+
+![Notes de bureau](../media/screenshots/03-desktop-notes.png)
+
+### Repli latéral et aperçu au survol
+
+Repliez les notes en onglets sur le bord. Survolez-les sans masquer les autres onglets.
+
+![Repli latéral et aperçu au survol](../media/screenshots/08-edge-dock.png)
+
+### Édition et aperçu Markdown
+
+Notez vos idées en Markdown et passez à un aperçu lisible.
+
+![Édition et aperçu Markdown](../media/screenshots/04-markdown.png)
 
 ## Installation et mises à jour
 
